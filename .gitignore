@@ -1,0 +1,5 @@
+.vs/
+src/Abstractions.IO.Path.Tests/bin/
+src/Abstractions.IO.Path.Tests/obj/
+src/Abstractions.IO.Path/bin/
+src/Abstractions.IO.Path/obj/
