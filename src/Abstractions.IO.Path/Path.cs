@@ -3,7 +3,10 @@ using JetBrains.Annotations;
 
 namespace Abstractions.IO
 {
+  using System.Diagnostics;
+
   [Serializable]
+  [DebuggerDisplay("{Value}")]
   public sealed class Path
   {
     public string Value { get; }
