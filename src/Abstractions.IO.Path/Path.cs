@@ -56,13 +56,21 @@ namespace Abstractions.IO
         }
         else if (first || last)
         {
+          // different types of quotes on left and right is not acceptable
           return null;
         }
       }
 
       // do not trim afterwards as this value was inside quotes 
       // and mistake there must not be tolerated
-      return new Path(value);
+      try
+      {
+        return new Path(value);
+      }
+      catch
+      {
+        return null;        
+      }
     }
 
     public override string ToString()
