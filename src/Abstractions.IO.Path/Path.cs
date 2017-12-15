@@ -8,8 +8,6 @@ namespace Abstractions.IO
   {
     public string Value { get; }
 
-    public string FullPath { get; }
-
     public Path(string value)
     {
       if (value == null)
@@ -24,7 +22,7 @@ namespace Abstractions.IO
 
       try
       {
-        FullPath = System.IO.Path.GetFullPath(value);
+        System.IO.Path.GetFullPath(value);
       }
       catch (NotSupportedException)
       {

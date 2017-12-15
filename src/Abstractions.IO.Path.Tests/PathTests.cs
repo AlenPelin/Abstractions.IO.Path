@@ -93,7 +93,6 @@ namespace Abstractions.IO
       var path = @"C:\folder1" / new Path(@"folder2/../folder2\folder3") / @"folder4\../folder4\folder5" / new Path(@"file6.txt");
 
       Assert.Equal(@"C:\folder1\folder2/../folder2\folder3\folder4\../folder4\folder5\file6.txt", path.Value);
-      Assert.Equal(@"C:\folder1\folder2\folder3\folder4\folder5\file6.txt", path.FullPath);
     }
 
     [Fact]
@@ -102,7 +101,6 @@ namespace Abstractions.IO
       var path = @"C:\folder1" + new Path(@"folder2/../folder2\folder3") + @"folder4\../folder4\folder5" + new Path(@"file6.txt");
 
       Assert.Equal(@"C:\folder1\folder2/../folder2\folder3\folder4\../folder4\folder5\file6.txt", path.Value);
-      Assert.Equal(@"C:\folder1\folder2\folder3\folder4\folder5\file6.txt", path.FullPath);
     }
   }
 }
